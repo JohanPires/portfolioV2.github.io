@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Web Developer Portfolio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Johan Pires</title>
+    <link rel="stylesheet" href="./assets/style/home.css" />
+    <link rel="stylesheet" href="./assets/style/settings.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="home-container">
+      <nav>
+        <div class="burger-button">
+          <span id="top"></span>
+          <span id="mid"></span>
+          <span id="bot"></span>
+        </div>
+        <ul>
+          <li><a href="./home.html">Accueil</a></li>
+          <li><a href="./career.html">Parcours</a></li>
+          <li><a href="./project.html">Projets</a></li>
+        </ul>
+      </nav>
+
+      <div class="main-container">
+        <div class="text-container">
+          <h1 id="text-anim">Portfolio</h1>
+          <p>
+            Bonjour, je m'appelle johan je suis actuellement en formation de
+            développeur web et j'aimerais continuer dans le développement
+            d'application
+          </p>
+
+          <div class="techno-container">
+            <h2>Techno et Language</h2>
+            <div class="note-container">
+              <span>HTML/CSS:</span>
+              <div class="note" id="html"></div>
+            </div>
+            <div class="note-container">
+              <span>Javascript:</span>
+              <div class="note" id="javascript"></div>
+            </div>
+            <div class="note-container">
+              <span>BOOTSTRAP:</span>
+              <div class="note" id="bootstrap"></div>
+            </div>
+            <div class="note-container">
+              <span>REACTJS:</span>
+              <div class="note" id="react"></div>
+            </div>
+            <div class="note-container">
+              <span>GITHUB:</span>
+              <div class="note" id="github-note"></div>
+            </div>
+            <div class="note-container">
+              <span>FIGMA:</span>
+              <div class="note" id="figma"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elements animé -->
+        <div class="square" id="left"></div>
+        <div class="square" id="right-top"></div>
+        <div class="square" id="right"></div>
+        <div class="circle"></div>
+        <div class="square-border"></div>
+
+        <!-- Elements Pour les différent sites ou me retrouver  -->
+        <div class="icon-container" id="linkedin">
+          <i class="fa-brands fa-linkedin-in"></i>
+          <a href="https://www.linkedin.com/in/johan-pires-365145244/"
+            >Linkedin</a
+          >
+        </div>
+        <div class="icon-container" id="github">
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/JohanPires">Git Hub</a>
+        </div>
+        <div class="icon-container" id="phone">
+          <i class="fa-solid fa-phone"></i>
+          <a href="">06 88 63 53 37</a>
+        </div>
+
+        <!-- Eléments pour activer l'apparition du formulaire  -->
+        <div class="circle" id="contact">Contact</div>
+      </div>
+
+      <!-- Formulaire  -->
+      <div class="form-container">
+        <button id="cross" title="Close form">
+          <i class="fa-regular fa-circle-xmark"></i>
+        </button>
+        <span>Me contacter</span>
+        <form action="">
+          <label for="name">Nom</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Entrer votre Nom"
+            required
+          />
+          <label for="lastName">Prénom</label>
+          <input
+            type="text"
+            id="lastName"
+            required
+            placeholder="Entrer votre Prénom"
+          />
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            required
+            placeholder="Entrer votre Email"
+          />
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Entrer votre message"></textarea>
+
+          <input type="submit" />
+        </form>
+      </div>
+    </div>
+
+    <script src="./home.js"></script>
+  </body>
+</html>

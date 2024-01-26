@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "font1";
+  src: url(/assets/font/RobotoMono-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #f8fae5 !important;
+  color: #76453b !important;
+  font-family: "font1" !important;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+  position: relative;
+}
+
+a {
+  text-decoration: none !important;
+  color: #76453b;
+}
+
+nav {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+nav li::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background: #76453b;
+  transform: scale(0);
+  transition: 0.3s ease-in;
+}
+
+nav li:hover::before {
+  transform: scale(1);
+}
+
+/* Style des éléments Animer  */
+
+.square {
+  height: 140px;
+  width: 140px;
+  border-radius: 20px;
+  background: #43766c;
+  position: absolute;
+  transition: 0.5s;
+  z-index: -5;
+}
+.square:hover {
+  transform: rotate(90deg);
+}
+
+.square-border {
+  height: 140px;
+  width: 140px;
+  border-radius: 40px;
+  background: #43766c;
+  position: absolute;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.square-border:hover {
+  transform: rotate(90deg);
+}
+
+.circle {
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
+  background: #43766c;
+  position: absolute;
+  z-index: 2;
+}
+
+/* Style pour les liens des sites  */
+
+.icon-container {
+  height: 40px;
+  width: 200px;
+  background: #76453b;
+  border-radius: 40px 0 0 40px;
+
+  position: absolute;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 12px;
+
+  right: -160px;
+
+  transition: 0.5s;
+
+  z-index: 2;
+}
+
+.icon-container:hover {
+  right: -10px;
+  box-shadow: 2px 3px 5px 0px #00000070;
+}
+
+.icon-container i {
+  color: #f8fae5;
+  width: 20%;
+}
+.icon-container a {
+  color: #f8fae5 !important;
+  width: 80%;
+}
+
+/* Style de la Navigation  */
+
+@media screen and (max-width: 900px) {
+  nav ul {
+    justify-content: space-between;
+  }
+}
+
+.burger-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 30px;
+  display: none;
+  transition: 0.15s;
+  z-index: 3;
+}
+
+.burger-button span {
+  width: 100%;
+  height: 25%;
+  background: #76453b;
+  border-radius: 5px;
+}
+
+.burger-button:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    height: auto;
+    z-index: 4;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 22px;
+    left: 70px;
+    transition: 0.2s;
+  }
+
+  .burger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .phone-nav {
+    display: flex !important;
+  }
+
+  nav li {
+    margin-right: 20px;
+  }
+
+  .background {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+  }
+
+  .blur {
+    display: block;
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  nav li {
+    top: 4px;
+    font-size: 0.7rem;
+  }
+}

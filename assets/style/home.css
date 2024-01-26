@@ -1,0 +1,563 @@
+.text-container {
+  width: 70%;
+  margin: 140px auto 0;
+}
+
+h1 {
+  position: relative;
+  margin-bottom: 60px;
+  width: 175px;
+  overflow: hidden;
+  color: transparent;
+  animation: textAppearance 1s forwards 1s;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateX(-220px);
+  background: #76453b;
+  animation: animText 2s ease-out 0.5s;
+}
+
+p {
+  width: 60%;
+  margin-bottom: 60px;
+}
+
+/* Elements Animés  */
+
+#right {
+  top: 280px;
+  right: -20px;
+  animation: anim3 2s infinite 3s;
+  z-index: 2;
+}
+#right-top {
+  top: 100px;
+  right: -80px;
+  animation: anim2 2s infinite 2s;
+  z-index: 2;
+}
+#left {
+  top: -30px;
+  right: 300px;
+  animation: anim1 2s infinite;
+  z-index: 2;
+}
+
+.square-border {
+  top: -50px;
+  right: 120px;
+  animation: anim1 2s infinite 1s;
+  z-index: 2;
+}
+
+.circle {
+  top: 120px;
+  right: 120px;
+}
+
+/* Element pour sortir le Formulaire  */
+
+#contact {
+  height: 180px;
+  width: 180px;
+  top: 85%;
+  right: -40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #f8fae5;
+  cursor: pointer;
+
+  transition: 0.3s;
+  z-index: 2;
+}
+
+#contact:hover {
+  transform: scale(1.1);
+
+  box-shadow: -7px -1px 6px 3px #00000040;
+}
+
+/* Liens vers les différents sites  */
+
+#linkedin {
+  top: 470px;
+}
+
+#github {
+  top: 520px;
+}
+#phone {
+  top: 570px;
+}
+
+/* Techno et language maitrisé  */
+
+.techno-container {
+  background-color: #b19470ba;
+  padding: 15px 50px;
+  border-radius: 15px;
+  width: 60%;
+
+  box-shadow: 2px 3px 5px 0px #00000070;
+}
+
+.techno-container h2 {
+  margin-bottom: 20px;
+}
+
+.techno-container span {
+  padding: 0 10px;
+  border-radius: 10px;
+  background: #76453b;
+  color: #f8fae5;
+  margin: 5px;
+  padding: 7px;
+  font-size: 0.8rem;
+}
+
+.techno-container .note-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.techno-container .note {
+  height: 30px;
+  width: 60%;
+  background: #f8fae5;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.techno-container .note::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  height: 100%;
+  width: 100%;
+  background: #43766c;
+  border-radius: 5px;
+}
+
+/* Formulaire */
+
+.form-container {
+  position: absolute;
+
+  top: -1000px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: #f8fae5;
+  padding: 50px;
+  border-radius: 40px;
+  height: 80%;
+  width: 60%;
+
+  box-shadow: 0 0px 3px 5px #0000004d;
+
+  transition: 0.8s;
+
+  z-index: 3;
+}
+
+form {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "i1 i1"
+    "i2 i2"
+    "i3 i3"
+    "ht ht"
+    "ta ta"
+    "su su";
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+}
+.form-container textarea {
+  grid-area: ta;
+  resize: none;
+  height: 200px;
+  background: none;
+  border: solid 1px #76453b;
+  padding: 10px;
+  border-radius: 5px;
+}
+.form-container label {
+  margin: 10px;
+  place-self: center;
+}
+.form-container input {
+  margin: 10px;
+  padding: 10px;
+
+  border: none;
+  background: none;
+  border-bottom: solid 1px #76453b;
+}
+
+.form-container a {
+  padding: 10px;
+}
+
+.form-container input[type="submit"] {
+  grid-area: su;
+  width: 20%;
+  margin: 0 auto;
+  border: solid 1px #76453b;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.form-container #cross {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  background: none;
+  border: none;
+
+  font-size: 40px;
+
+  color: #76453b;
+}
+
+/* Animation */
+
+@keyframes anim1 {
+  0% {
+    top: -50px;
+  }
+  50% {
+    top: -30px;
+  }
+
+  100% {
+    top: -50px;
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    right: -80px;
+  }
+  50% {
+    right: -60px;
+  }
+
+  100% {
+    right: -80px;
+  }
+}
+
+@keyframes anim3 {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 0;
+  }
+
+  100% {
+    right: -20px;
+  }
+}
+
+@keyframes animText {
+  0% {
+    transform: translateX(-210px);
+  }
+
+  to {
+    transform: translateX(220px);
+  }
+}
+
+@keyframes textAppearance {
+  from {
+    color: transparent;
+  }
+  to {
+    color: #76453b;
+  }
+}
+
+/* Note Animation */
+
+#html::before {
+  animation: animHtml 2s forwards 0.5s;
+}
+
+#javascript::before {
+  animation: animJavascript 2s forwards 0.5s;
+}
+
+#bootstrap::before {
+  animation: animBootstrap 2s forwards 0.5s;
+}
+
+#react::before {
+  animation: animReact 2s forwards 0.5s;
+}
+
+#github-note::before {
+  animation: animGithub 2s forwards 0.5s;
+}
+#figma::before {
+  animation: animFigma 2s forwards 0.5s;
+}
+
+@keyframes animHtml {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 20%;
+  }
+}
+@keyframes animJavascript {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 40%;
+  }
+}
+@keyframes animReact {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 50%;
+  }
+}
+@keyframes animBootstrap {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 50%;
+  }
+}
+@keyframes animFigma {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 30%;
+  }
+}
+@keyframes animGithub {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 70%;
+  }
+}
+
+/* Responsive  */
+
+@media screen and (max-width: 1100px) {
+  .techno-container {
+    width: 80%;
+  }
+
+  .text-container p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* square anim  */
+
+  .home-container .square-border {
+    width: 100px;
+    height: 100px;
+    right: 50px;
+  }
+
+  .home-container .square {
+    width: 100px;
+    height: 100px;
+  }
+
+  .home-container .circle {
+    width: 100px;
+    height: 100px;
+    top: 80px;
+    right: 100px;
+  }
+
+  #right {
+    top: 160px;
+  }
+
+  #right-top {
+    top: 30px;
+  }
+
+  #left {
+    right: 180px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .text-container {
+    margin-left: 30px;
+  }
+
+  .techno-container {
+    padding: 15px 20px;
+  }
+  .techno-container span {
+    font-size: 0.6rem;
+  }
+
+  .techno-container .note {
+    height: 15px;
+  }
+
+  .text-container p {
+    font-size: 0.8rem;
+  }
+
+  #contact {
+    width: 100px;
+    height: 100px;
+    font-size: 0.7rem;
+    top: 90%;
+    right: -25px;
+  }
+
+  #contact:hover {
+    transform: scale(1.05);
+  }
+
+  .form-container {
+    width: auto;
+  }
+  .form-container input[type="submit"] {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .home-container .square-border {
+    width: 50px;
+    height: 50px;
+    right: 25px;
+  }
+
+  .home-container .square {
+    width: 50px;
+    height: 50px;
+  }
+
+  .home-container .circle {
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    right: 50px;
+  }
+
+  #right {
+    top: 80px;
+  }
+
+  #right-top {
+    top: 15px;
+    right: -15px;
+  }
+
+  #left {
+    right: 90px;
+  }
+
+  @keyframes anim1 {
+    0% {
+      top: -50px;
+    }
+    50% {
+      top: -30px;
+    }
+
+    100% {
+      top: -50px;
+    }
+  }
+
+  @keyframes anim2 {
+    0% {
+      right: -15px;
+    }
+    50% {
+      right: -5px;
+    }
+
+    100% {
+      right: -15px;
+    }
+  }
+
+  @keyframes anim3 {
+    0% {
+      right: -20px;
+    }
+    50% {
+      right: 0;
+    }
+
+    100% {
+      right: -20px;
+    }
+  }
+
+  .text-container p {
+    width: 100%;
+  }
+
+  .icon-container {
+    height: 30px;
+    font-size: 0.7rem;
+  }
+
+  #linkedin {
+    top: 30%;
+  }
+
+  #github {
+    top: 37%;
+  }
+
+  #phone {
+    top: 44%;
+  }
+
+  .techno-container {
+    width: 120%;
+  }
+
+  .form-container {
+    padding: 10px;
+  }
+
+  .form-container input {
+    margin: 5px;
+    padding: 5px;
+  }
+}
